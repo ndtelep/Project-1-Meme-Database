@@ -18,19 +18,19 @@
 // }
 
 let memeFeed = document.getElementById("meme-list")
+let navItem = document.createElement('img')
 
 fetch("https://api.imgflip.com/get_memes")
 .then(response => response.json())
-.then(memeInfo => {
-    navBar(memeInfo)})
+.then(memeInfo =>{
+    scroller(memeInfo)
+})
 
-function navBar(memeInfo){
-        memeInfo.forEach(meme => {
-            let eachMeme = document.createElement('img')
-            eachMeme.src = meme.url
-            memeFeed.append(navItem)
-        });
+function scroller(memeInfo){
+    navItem.src = memeInfo.data.memes["1"].url
+        memeFeed.append(navItem)
     }
+    
 // function addMeme(){
 //     let eachMeme = document.createElement("img")
 //     eachMeme.src = //url here
