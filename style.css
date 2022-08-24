@@ -1,7 +1,22 @@
+:root {
+    --primary-color: yellow;
+    --secondary-color: black;
+    --font-color: black;
+    --background-image: url('https://t3.ftcdn.net/jpg/02/64/27/90/360_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg');
+}
+
+[data-theme="light"] {
+    --primary-color: black;
+    --secondary-color: yellow;
+    --font-color: yellow;
+    --background-image: url('https://img.freepik.com/free-vector/white-background-vector-with-black-dot-patterns_53876-126698.jpg?w=740&t=st=1661359276~exp=1661359876~hmac=69ee09f0f5b15a832b187d118ac918b799e13fb4fde743e81868b7c41d30770c');
+}
+
 h1{
     margin: auto;
     width: 400px;
-    background: yellow;
+    /* background: yellow; */
+    background: var(--primary-color)
  }
 p{
     margin: auto;
@@ -9,15 +24,32 @@ p{
     background: red
 }
 body {
-    background-image: url('https://t3.ftcdn.net/jpg/02/64/27/90/360_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg');
+    /* background-image: url('https://t3.ftcdn.net/jpg/02/64/27/90/360_F_264279006_WDXxV3OHjAOoHqH7iiLDrg23p0947g7U.jpg'); */
+    background-image: var(--background-image);
     background-attachment: fixed;
 }
-#fav-btn {
-    background: yellow;
-}
-#all-btn {
-    background: yellow;
+button {
+    /* background: yellow; */
+    background: var(--primary-color);
 }
 #toggle-bar {
     margin-top: 15px;
 }
+#theme-button {
+    /* background: yellow; */
+    background: var(--primary-color);
+}
+h5{
+    width:400px;
+    position: absolute; 
+}
+img {
+    float: left;
+    width:  500px;
+    object-fit: cover;
+    margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
